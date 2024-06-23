@@ -6,59 +6,56 @@
     <title>Basic Calculator</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main-container">
         <div class="screen">
-            <h1 class="text"></h1>
+            <h1 class="text">1234</h1>
         </div>
         <div class="buttons">
             <div class="numbers">
-                <div class="numset1">
+                <div class="numset">
                     <button>7</button>
                     <button>8</button>
                     <button>9</button>
                 </div>
-                <div class="numset2">
+                <div class="numset">
                     <button>4</button>
                     <button>5</button>
                     <button>6</button>
                 </div>
-                <div class="numset3">
+                <div class="numset">
                     <button>1</button>
                     <button>2</button>
                     <button>3</button>
                 </div>
-                <div class="numset4">
-                    <button>C</button>
+                <div class="numset">
+                    <button class="clear">C</button>
                     <button>0</button>
-                    <button>.</button>
+                    <button class="dot">.</button>
                 </div>
             </div>
             <div class="operations">
                 <div class="operations1">
-                    <button>+/-</button>
-                    <button>
-                        <ion-icon name="backspace-outline"></ion-icon>
-                    </button>
+                    <button class="esp">±</button>
+                    <button class="esp">↵</button>
                 </div>
                 <div class="operations2">
-                    <button>
-                        <ion-icon name="close-outline"></ion-icon>
-                    </button>
+                    <button class="op">×</button>
+                    <button class="op">÷</button>
                 </div>
                 <div class="operations3">
-                    <div class="addsub">
-                        <button>
-                            <ion-icon name="remove-outline"></ion-icon>
-                        </button>
-                        <button>
-                            <ion-icon name="add-outline"></ion-icon>
-                        </button>
+                    <div class="subadd">
+                        <div class="sub">
+                            <button class="op minus">-</button>
+                        </div>
+                        <div class="add">
+                            <button class="op">+</button>
+                        </div>
                     </div>
                     <div class="equal">
-                        <button>=</button>
+                        <button class="equal-btn">=</button>
                     </div>
                 </div>
             </div>
