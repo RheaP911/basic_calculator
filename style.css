@@ -17,146 +17,101 @@
     --montserrat: "Montserrat", sans-serif;
 
     --white: #FFF;
-    --black: #212121;
-    --shadow: #000;
-    --shadow2: #2F2F2F;
-    --gray: #666;
+    --grey: #888484;
+    --black: #000;
     --red: #B5130D;
-    --shadow-red: #3a0200f3;
-    --shadow2-red: #cb3934a6;
-    --yellow: #F1A400;
-    --shadow-yellow: #2b1e01;
-    --shadow2-yellow:rgb(119, 83, 5)0;
     --blue: #063F8E;
+    --purple: #9E6DF7;
+    --light: #F0F0F0;
 }
 
 
 body {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--black);
+    background: var(--white);
+    overflow: hidden;
 }
 
 .main-container {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 450px;
-    /* height: 90%; */
-    border-radius: 25px;
-    border-radius: 8px;
-    border: 1px solid var(--black);
-    transition: all 0.3s;
-    border-radius: 20px;
-    box-shadow: -5px -5px 9px rgba(0,0,0,0.45), 5px 5px 9px rgba(12, 13, 16, 0.674);
-    padding: 60px 25px;
-    scale: 0.8;
-    font-family: var(--montserrat);
+    padding: 40px 20px;
 }
 
 .screen {
+    width: 100%;
+    height: 50%;
+    border-bottom: 0.2px solid var(--grey);
     display: flex;
-    align-items: center;
-    justify-content: right;
-    color: var(--white);
-    width: 85%;
-    height: 100px;
-    padding: 5px 25px;
-    border-radius: 8px;
-    border: 1px solid var(--black);
-    box-shadow: inset -6px -6px 12px var(--shadow2), inset 6px 6px 12px var(--shadow);
-    margin-bottom: 3em;
-    cursor: pointer;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    padding: 10px 0;
 }
 
-.text {
-    font-size: 64px;
-    font-family: var(--digital);
+.screen h1 {
+    font-family: var(--montserrat);
 }
+
+.screen .input {
+    font-weight: 600;
+    font-size: 48px;
+} 
+
+.screen .result {
+    font-weight: 300;
+    font-size: 24px;
+    color: var(--grey);
+} 
+
 
 .buttons {
+    width: 100%;
+    height: 50%;
+    padding: 10px 0;
+}
+
+.numset {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: space-between;
 }
 
 button {
-    color: var(--white);
-    font-size: 28px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    background: var(--black);
-    border: 1px solid var(--black);
-    border-radius: 15px;
-    box-shadow: 6px 6px 12px var(--shadow), -6px -6px 12px var(--shadow2);
-    transition: all 0.3s;
-    margin: 5px;
-    cursor: pointer;
+    font-size: 24px;
+    color: var(--black);
+    padding: 15px;
+    min-width: 65px;
+    min-height: 65px;
+    background-color: var(--white);
+    border-color: transparent;
 }
 
 button:active {
-    color: var(--gray);
-    box-shadow: inset 4px 4px 12px var(--shadow), inset -4px -4px 12px var(--shadow2);
+    background-color: var(--light);
+    border-radius: 50%;
+}
+
+.numset .op {
+    color: var(--purple);
+}
+
+.numset .equal {
+    width: 65px;
+    height: 65px;
+    padding: 15px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    color: var(--white);
 }
 
 
-.buttons .numset .clear {
-    background: var(--red);
-    padding: 10px 18px;
-    border: 1px solid var(--red);
-}
 
-.clear:active {
-    color: var(--gray);
-    box-shadow: inset 4px 4px 12px var(--shadow-red), inset -4px -4px 12px var(--shadow2-red);
-}
-
-
-.buttons .numset .dot {
-    padding: 10px 23px;
-} 
-
-.buttons .operations .op {
-    color: var(--shadow);
-    background: var(--yellow);
-    border: 1px solid var(--yellow);
-}
-
-.op:active {
-    color: var(--gray);
-    box-shadow: inset 4px 4px 12px var(--shadow-yellow), inset -4px -4px 12px var(--shadow2-yellow);
-}
-
-/* .buttons .operations .esp {
-    color: var(--shadow);
-    background: var(--blue);
-} */
-
-.buttons .operations .minus {
-    padding: 10px 23px;
-}
-
-.equal-btn {
-    background-color: var(--blue);
-    height: 90%;
-    border: 1px solid var(--blue);
-}
-
-.operations3 {
-    display: flex;
-    flex-direction: row;
-}
-
-@media (max-width: 450px) {
-    button{
-        margin: auto;
-        scale: 0.8;
-    }
-    .equal-btn{
-        height: 104%;
-    }
-}
