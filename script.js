@@ -31,7 +31,6 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 toggle.addEventListener('change', switchTheme, false);
 
 
-
 // Input numbers on screen
 function showInputPoint() {
     var num7 = document.getElementById('num_point').value;
