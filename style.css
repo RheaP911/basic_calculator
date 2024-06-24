@@ -12,6 +12,7 @@
 
     --primary-color: #9E6DF7;
     --secondary-color: #888484;
+    --tertiary-color: #F0F0F0;
     --font-color: #171717;
     --bg-color: #fff;
     --dark-black: #171717;
@@ -20,6 +21,7 @@
 [data-theme="dark"] {
     --primary-color: #9A97F3;
     --secondary-color: #888484;
+    --tertiary-color: rgb(29, 28, 28);
     --font-color: #FFF;
     --bg-color: #171717;
 }
@@ -167,7 +169,7 @@ button {
 }
 
 button:active {
-    background-color: var(--secondary-color);
+    background-color: var(--tertiary-color);
     border-radius: 50%;
 }
 
