@@ -7,6 +7,7 @@ if (currentTheme) {
   
     if (currentTheme === 'dark') {
         toggleSwitch.checked = true;
+        document.querySelector('#mode').innerHTML = "Dark Mode";
     }
 }
 
@@ -25,6 +26,7 @@ function switchTheme(e) {
 toggleSwitch.addEventListener('change', switchTheme, false);
 
 toggle.addEventListener('change', switchTheme, false);
+
 
 
 // Input numbers on screen
