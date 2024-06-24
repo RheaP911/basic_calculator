@@ -8,6 +8,8 @@ if (currentTheme) {
     if (currentTheme === 'dark') {
         toggleSwitch.checked = true;
         document.querySelector('#mode').innerHTML = "Dark Mode";
+    } else {
+        document.querySelector('#mode').innerHTML = "Light Mode";
     }
 }
 
@@ -17,9 +19,10 @@ function switchTheme(e) {
         document.querySelector('#mode').innerHTML = "Dark Mode";
         localStorage.setItem('theme', 'dark');
     }
-    else {        document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
-            document.querySelector('#mode').innerHTML = "Light Mode";
+    else {        
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        document.querySelector('#mode').innerHTML = "Light Mode";
     }    
 }
 
