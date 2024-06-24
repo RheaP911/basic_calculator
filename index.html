@@ -11,45 +11,55 @@
 <body>
     <div class="main-container">
         <div class="screen">
-            <h1 class="input">1234</h1>
-            <h1 class="result">= 1234</h1>
+            <div class="switch-div">
+                <p id="mode">Light Mode</p>
+                <label class="switch" > 
+                    <input type="checkbox" class="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <!-- <p>Light Mode</p> -->
+            </div>
+            <div class="text">
+                <h1 class="input" id="input">0</h1>
+                <h1 class="result"></h1> 
+            </div>
         </div>
         <div class="buttons">
             <div class="numbers">
                 <div class="numset">
-                    <button class="op">C</button>
+                    <button class="op" id="clear" onclick="clearInput()">C</button>
                     <button class="op">
-                        <ion-icon name="backspace-outline"></ion-icon>
+                        <ion-icon name="backspace-outline" class="bp-icon"></ion-icon>
                     </button>
                     <button class="op">%</button>
                     <button class="op">÷</button>
                 </div>
                 <div class="numset">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
+                    <button value="7" onclick="showInput7()" id="num7">7</button>
+                    <button value="8" onclick="showInput8()" id="num8">8</button>
+                    <button value="9" onclick="showInput9()" id="num9">9</button>
                     <button class="op">×</button>
                 </div>
                 <div class="numset">
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
+                    <button value="4" onclick="showInput()" id="num4">4</button>
+                    <button value="5" onclick="showInput()" id="num5">5</button>
+                    <button value="6" onclick="showInput()" id="num6">6</button>
                     <button class="op">-</button>
                 </div>
                 <div class="numset">
-                   <button>1</button>
-                   <button>2</button>
-                   <button>3</button>
+                   <button value="1" onclick="showInput()" id="num1">1</button>
+                   <button value="2" onclick="showInput()" id="num2">2</button>
+                   <button value="3" onclick="showInput()" id="num3">3</button>
                    <button class="op">+</button>
                 </div>
                 </div><div class="numset">
                     <button class="op">±</button>
-                    <button>0</button>
-                    <button>.</button>
+                    <button value="0" onclick="showInput()" id="num0">0</button>
+                    <button value="." onclick="showInputPoint()" id="num_point">.</button>
                     <button class="op equal">=</button>
                 </div>
         </div>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
