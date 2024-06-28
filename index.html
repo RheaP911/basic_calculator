@@ -20,43 +20,44 @@
                 <!-- <p>Light Mode</p> -->
             </div>
             <div class="text">
-                <h1 class="input" id="input">0</h1>
+                <!-- <input type="text" class="input" id="input" placeholder="0"></input> -->
+                <input type="text" class="input" name="result" id="result" placeholder="0" readonly />
                 <h1 class="result"></h1> 
             </div>
         </div>
         <div class="buttons">
             <div class="numbers">
                 <div class="numset">
-                    <button class="op" id="clear" onclick="clearInput()">C</button>
+                    <input type="button" class="op" value="C" onclick="result.value=''" id="clear-button" />
                     <button class="op">
                         <ion-icon name="backspace-outline" class="bp-icon"></ion-icon>
                     </button>
                     <button class="op">%</button>
-                    <button class="op">÷</button>
+                    <input type="button" class="op" value="÷" onclick="screenInput('/')" />
                 </div>
                 <div class="numset">
-                    <button value="7" onclick="screenInput(7)">7</button>
-                    <button value="8" onclick="screenInput(8)">8</button>
-                    <button value="9" onclick="screenInput(9)">9</button>
-                    <button class="op" onclick="screenInput('×')">×</button>
+                    <input type="button" value="7" onclick="screenInput(7)">
+                    <input type="button" value="8" onclick="screenInput(8)">
+                    <input type="button" value="9" onclick="screenInput(9)">
+                    <input type="button" class="op" value="x" onclick="screenInput('x')">
                 </div>
                 <div class="numset">
-                    <button value="4" onclick="screenInput(4)">4</button>
-                    <button value="5" onclick="screenInput(5)">5</button>
-                    <button value="6" onclick="screenInput(6)">6</button>
-                    <button class="op" onclick="screenInput('-')">-</button>
+                    <input type="button" value="4" onclick="screenInput(4)">
+                    <input type="button" value="5" onclick="screenInput(5)">
+                    <input type="button" value="6" onclick="screenInput(6)">
+                    <input type="button" class="op" value="-" onclick="screenInput('-')">
                 </div>
                 <div class="numset">
-                   <button value="1" onclick="screenInput(1)">1</button>
-                   <button value="2" onclick="screenInput(2)">2</button>
-                   <button value="3" onclick="screenInput(3)">3</button>
-                   <button class="op" onclick="screenInput('+')">+</button>
+                   <input type="button" value="1" onclick="screenInput(1)">
+                   <input type="button" value="2" onclick="screenInput(2)">
+                   <input type="button" value="3" onclick="screenInput(3)">
+                   <input type="button" class="op" value="+" onclick="screenInput('+')">
                 </div>
                 </div><div class="numset">
-                    <button class="op" onclick="screenInput()">±</button>
-                    <button value="0" onclick="screenInput(0)">0</button>
-                    <button value="." onclick="screenInput('.')">.</button>
-                    <button class="op equal" onclick="calculate(input.value)">=</button>
+                    <input type="button" class="op" onclick="screenInput('±')">
+                    <input type="button" value="0" onclick="screenInput(0)">
+                    <input type="button" value="." onclick="screenInput('.')">
+                    <input type="button" class="op equal" value= "=" onclick="calculate(result.value)">
                 </div>
         </div>
     </div>

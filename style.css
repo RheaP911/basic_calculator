@@ -107,6 +107,15 @@ body {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.switch-div a {
+    text-decoration: none;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.text input::placeholder {
+    color: var(--font-color);
+}
 
 .switch input:checked + .slider {
     background: var(--secondary-color);
@@ -135,7 +144,9 @@ transform: translateX(1em);
 .screen .input {
     font-weight: 600;
     font-size: 48px;
+    background-color: var(--bg-color);
     color: var(--font-color);
+    border: none;
 } 
 
 .screen .result {
@@ -157,7 +168,8 @@ transform: translateX(1em);
     align-items: space-between;
 }
 
-button {
+button,
+input {
     font-size: 24px;
     color: var(--font-color);
     padding: 15px;
@@ -168,7 +180,8 @@ button {
     font-family: var(--montserrat);
 }
 
-button:active {
+button:active,
+input:active {
     background-color: var(--tertiary-color);
     border-radius: 50%;
 }
@@ -197,8 +210,3 @@ button:active {
     transition: all 0.3s;
 }
 
-.switch-div a {
-    text-decoration: none;
-    color: var(--font-color);
-    cursor: pointer;
-}

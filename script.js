@@ -31,27 +31,27 @@ toggle.addEventListener('change', switchTheme, false);
 
 
 // ScreenInput
-const inp = document.getElementById("input");
+const res = document.getElementById("result");
 
 function calculate(value) {
   const calculatedValue = eval(value || null);
   if (isNaN(calculatedValue)) {
-    inp.value = "Can't divide 0 with 0";
+    res.value = "Can't divide 0 with 0";
     setTimeout(() => {
-        inp.value = "";
+        res.value = "";
     }, 1300);
   } else {
-    inp.value = calculatedValue;
+    res.value = calculatedValue;
   }
 }
 
 
 // Displays entered value on screen.
 function screenInput(enteredValue) {
-  if (!inp.value) {
-    inp.value = "";
+  if (!res.value) {
+    res.value = "";
   }
-  inp.value += enteredValue;
+  res.value += enteredValue;
 }
 
 //adding event handler on the document to handle keyboard inputs
@@ -66,54 +66,54 @@ function keyboardInputHandler(e) {
 
   //numbers
   if (e.key === "0") {
-    inp.value += "0";
+    res.value += "0";
   } else if (e.key === "1") {
-    inp.value += "1";
+    res.value += "1";
   } else if (e.key === "2") {
-    inp.value += "2";
+    res.value += "2";
   } else if (e.key === "3") {
-    inp.value += "3";
+    res.value += "3";
   } else if (e.key === "4") {
-    inp.value += "4";
+    res.value += "4";
   } else if (e.key === "5") {
-    inp.value += "5";
+    res.value += "5";
   } else if (e.key === "6") {
-    inp.value += "6";
+    res.value += "6";
   } else if (e.key === "7") {
-    inp.value += "7";
+    res.value += "7";
   } else if (e.key === "7") {
-    inp.value += "7";
+    res.value += "7";
   } else if (e.key === "8") {
-    inp.value += "8";
+    res.value += "8";
   } else if (e.key === "9") {
-    inp.value += "9";
+    res.value += "9";
   }
 
   //operators
   if (e.key === "+") {
-    inp.value += "+";
+    res.value += "+";
   } else if (e.key === "-") {
-    inp.value += "-";
+    res.value += "-";
   } else if (e.key === "*") {
-    inp.value += "*";
+    res.value += "*";
   } else if (e.key === "/") {
-    inp.value += "/";
+    res.value += "/";
   }
 
   //decimal key
   if (e.key === ".") {
-    inp.value += ".";
+    res.value += ".";
   }
 
   //press enter to see result
   if (e.key === "Enter") {
-    calculate(input.value);
+    calculate(result.value);
   }
 
   //backspace for removing the last input
   if (e.key === "Backspace") {
-    const resultInput = inp.value;
+    const resultInput = res.value;
     //remove the last element in the string
-    inp.value = resultInput.substring(0, inp.value.length - 1);
+    res.value = resultInput.substring(0, res.value.length - 1);
   }
 }
