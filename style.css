@@ -188,10 +188,17 @@ button:active {
     padding: 15px;
     background-color: var(--primary-color);
     border-radius: 50%;
-    color: var(--font-color);
+    scale: 0.9;
+    color: var(--bg-color);
 }
 
 .equal:active {
-    scale: 0.9;
+    scale: 0.8;
     transition: all 0.3s;
+}
+
+.switch-div a {
+    text-decoration: none;
+    color: var(--font-color);
+    cursor: pointer;
 }
