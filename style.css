@@ -180,10 +180,19 @@ input {
     font-family: var(--montserrat);
 }
 
+input[type=text]:focus {
+    border: transparent;
+}
+
 button:active,
-input:active {
+input[type=button]:active {
     background-color: var(--tertiary-color);
     border-radius: 50%;
+}
+
+input[type=text] {
+    text-align: right;
+    padding: 0;
 }
 
 .bp-icon {

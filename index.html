@@ -17,10 +17,8 @@
                     <input type="checkbox" class="checkbox">
                     <span class="slider"></span>
                 </label>
-                <!-- <p>Light Mode</p> -->
             </div>
             <div class="text">
-                <!-- <input type="text" class="input" id="input" placeholder="0"></input> -->
                 <input type="text" class="input" name="result" id="result" placeholder="0" readonly />
                 <h1 class="result"></h1> 
             </div>
@@ -54,7 +52,7 @@
                    <input type="button" class="op" value="+" onclick="screenInput('+')">
                 </div>
                 </div><div class="numset">
-                    <input type="button" class="op" onclick="screenInput('±')">
+                    <input type="button" class="op" value="±" onclick="screenInput('±')">
                     <input type="button" value="0" onclick="screenInput(0)">
                     <input type="button" value="." onclick="screenInput('.')">
                     <input type="button" class="op equal" value= "=" onclick="calculate(result.value)">
