@@ -24,6 +24,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 // ScreenInput
 const res = document.getElementById("result");
+// const subres = document.getElementById("subresult");
 
 function calculate(value) {
     const sanitizedValue = value.replace(/x/g, '*').replace(/÷/g, '/');
