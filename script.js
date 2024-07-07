@@ -51,6 +51,18 @@ function backSpace() {
     res.value = res.value.slice(0, -1);
 }
 
+function convertPercent() {
+    res.value = res.value / 100;
+}
+
+function convertPercent() {
+    res.value = res.value / 100;
+}
+
+function negateNum() {
+    res.value = res.value * -1 ;
+}
+
 // Adding event handler on the document to handle keyboard inputs
 document.addEventListener("keydown", keyboardInputHandler);
 
