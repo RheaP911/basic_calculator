@@ -223,7 +223,7 @@ input[type=text] {
 
 @media (min-width: 768px) {
     .main-container {
-        border: 1px solid var(--primary-color);
+        border: 2px solid var(--primary-color);
         border-radius: 25px;
         scale: 0.9;
     }
