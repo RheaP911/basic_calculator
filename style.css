@@ -145,6 +145,7 @@ transform: translateX(1em);
 .screen .input {
     font-weight: 600;
     font-size: 48px;
+    /* font-size: clamp(48px, 10vw, 24px); */
     background-color: var(--bg-color);
     color: var(--font-color);
     border: none;
@@ -181,9 +182,6 @@ input {
     font-family: var(--montserrat);
 }
 
-input[type=text]:focus {
-    border: transparent;
-}
 
 button:active,
 input[type=button]:active {
@@ -195,7 +193,9 @@ input[type=text] {
     text-align: right;
     padding: 0;
     width: 100%;
+    border: transparent;
 }
+
 
 .bp-icon {
     font-size: 28px;
