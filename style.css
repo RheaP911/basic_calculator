@@ -48,6 +48,15 @@ body {
     padding: 40px 20px;
 }
 
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .screen {
     width: 100%;
     height: 50%;
@@ -221,10 +230,29 @@ input[type=text] {
     transition: all 0.3s;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 475px) {
     .main-container {
         border: 2px solid var(--primary-color);
         border-radius: 25px;
-        scale: 0.9;
+    }
+    .wrapper {
+        scale: 0.95;
+    }
+}
+
+@media (min-width: 640px) {
+    .wrapper {
+        scale: 0.95;
+    }
+}
+@media (min-width: 1024px) {
+    body {
+        padding: 1rem;
+    }
+    .wrapper {
+        scale: 0.8;
+    }
+    .main-container {
+        padding: 0;
     }
 }

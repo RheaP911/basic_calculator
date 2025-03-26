@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,58 +9,65 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="main-container">
-        <div class="screen">
-            <div class="switch-div">
-                <p id="mode">Developed by <a href="https://rheap911.github.io/Portfolio/" class="develper">Rhealyn</a></p>
-                <label class="switch" > 
-                    <input type="checkbox" class="checkbox">
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="text">
-                <input type="text" class="input" name="result" id="result" placeholder="0" readonly />
-                <!-- <input type="text" class="input" name="result" id="subresult" readonly /> -->
+        <div class="wrapper">
+            <div class="screen">
+                <div class="switch-div">
+                    <p id="mode">Developed by <a href="https://rhealyn-panganiban.vercel.app/"
+                            class="develper">Rhealyn</a></p>
+                    <label class="switch">
+                        <input type="checkbox" class="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="text">
+                    <input type="text" class="input" name="result" id="result" placeholder="0" readonly />
+                    <!-- <input type="text" class="input" name="result" id="subresult" readonly /> -->
 
+                </div>
             </div>
-        </div>
-        <div class="buttons">
-            <div class="numbers">
-                <div class="numset">
-                    <input type="button" class="op" value="C" onclick="result.value=''" id="clear-button" />
-                    <button class="op" onclick="convertPercent()">%</button>
-                    <button class="op" onclick="backSpace()">
-                        <ion-icon name="backspace-outline" class="bp-icon"></ion-icon>
-                    </button>
-                    <input type="button" class="op" value="÷" onclick="screenInput('/')" />
+            <div class="buttons">
+                <div class="numbers">
+                    <div class="numset">
+                        <input type="button" class="op" value="C" onclick="result.value=''" id="clear-button" />
+                        <button class="op" onclick="convertPercent()">%</button>
+                        <button class="op" onclick="backSpace()">
+                            <ion-icon name="backspace-outline" class="bp-icon"></ion-icon>
+                        </button>
+                        <input type="button" class="op" value="÷" onclick="screenInput('/')" />
+                    </div>
+                    <div class="numset">
+                        <input type="button" value="7" onclick="screenInput(7)">
+                        <input type="button" value="8" onclick="screenInput(8)">
+                        <input type="button" value="9" onclick="screenInput(9)">
+                        <input type="button" class="op" value="x" onclick="screenInput('x')">
+                    </div>
+                    <div class="numset">
+                        <input type="button" value="4" onclick="screenInput(4)">
+                        <input type="button" value="5" onclick="screenInput(5)">
+                        <input type="button" value="6" onclick="screenInput(6)">
+                        <input type="button" class="op" value="-" onclick="screenInput('-')">
+                    </div>
+                    <div class="numset">
+                        <input type="button" value="1" onclick="screenInput(1)">
+                        <input type="button" value="2" onclick="screenInput(2)">
+                        <input type="button" value="3" onclick="screenInput(3)">
+                        <input type="button" class="op" value="+" onclick="screenInput('+')">
+                    </div>
                 </div>
                 <div class="numset">
-                    <input type="button" value="7" onclick="screenInput(7)">
-                    <input type="button" value="8" onclick="screenInput(8)">
-                    <input type="button" value="9" onclick="screenInput(9)">
-                    <input type="button" class="op" value="x" onclick="screenInput('x')">
-                </div>
-                <div class="numset">
-                    <input type="button" value="4" onclick="screenInput(4)">
-                    <input type="button" value="5" onclick="screenInput(5)">
-                    <input type="button" value="6" onclick="screenInput(6)">
-                    <input type="button" class="op" value="-" onclick="screenInput('-')">
-                </div>
-                <div class="numset">
-                   <input type="button" value="1" onclick="screenInput(1)">
-                   <input type="button" value="2" onclick="screenInput(2)">
-                   <input type="button" value="3" onclick="screenInput(3)">
-                   <input type="button" class="op" value="+" onclick="screenInput('+')">
-                </div>
-                </div><div class="numset">
                     <input type="button" class="op" value="±" onclick="negateNum()">
                     <input type="button" value="0" onclick="screenInput(0)">
                     <input type="button" value="." onclick="screenInput('.')">
-                    <input type="button" class="op equal" value= "=" onclick="calculate(result.value)">
+                    <input type="button" class="op equal" value="=" onclick="calculate(result.value)">
                 </div>
+            </div>
         </div>
+
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
